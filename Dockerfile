@@ -4,6 +4,10 @@ FROM python:3.8.10
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
+# Install OpenCV dependencies
+RUN apt-get update && \
+    apt-get install -y libgl1-mesa-dev
+
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
 
@@ -18,4 +22,3 @@ ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "./app.py"]
-

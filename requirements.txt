@@ -5,3 +5,4 @@ numpy
 ImageHash
 opencv-python
 Werkzeug
+requests
